@@ -1,0 +1,23 @@
+<h1> Write a new word </h1>
+
+<%= form_with(model: @word) do |form| %>
+  
+  <div>
+    <%= form.label :eng_word, style: "display: block" %>
+    <%= form.text_field :eng_word %>
+  </div>
+
+  <div>
+    <%= form.label :transcription, style: "display: block" %>
+    <%= form.text_field :transcription %>
+  </div>
+
+  <div>
+    <%= form.label :translation, style: "display: block" %>
+    <%= form.text_area :translation %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

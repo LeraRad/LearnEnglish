@@ -1,4 +1,4 @@
-20.times do |word|
+=begin20.times do |word|
   Word.create!(
     eng_word: "Word #{word}",
     translation: "Translation",
@@ -6,4 +6,4 @@
     )
 end
 
-puts "20 words created"
+puts "20 words created"=end

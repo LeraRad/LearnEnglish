@@ -1,0 +1,12 @@
+<h1>Texts</h1>
+
+<%= link_to "Add a new text", new_text_url %>
+
+<% @text.each do |text| %>
+<hr>
+<p><%= link_to text.title, text_path(text) %> <%= text.body %></p>
+
+<%= link_to "Edit", edit_text_path(text.id) %>
+<%= link_to "Delete", text_path(text), data: { turbo_method: :delete, turbo_confirm: "Are you sure, that you want to delete this Text?"}  %>
+
+<% end %>

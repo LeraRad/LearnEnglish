@@ -66,5 +66,6 @@ group :development do
   
   gem 'excon'
   gem 'i18n_data'
+  gem 'devise', '~> 4.8', '>= 4.8.1'
 end
 

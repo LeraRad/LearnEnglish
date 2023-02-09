@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+  root to: 'words#index'
+  get 'translation', to: 'translations#index'
+  post 'translations/translate', as: :translate
   resources :texts
   resources :rules
   resources :words

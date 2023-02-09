@@ -16,6 +16,13 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <% if current_user %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= button_to "Register", new_user_registration_path %>
+      <%= button_to "Login", new_user_session_path %>
+    <% end %>
+
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

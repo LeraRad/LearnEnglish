@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'words#index'
   get 'translation', to: 'translations#index'
   post 'translations/translate', as: :translate
+  resources :texts
   resources :rules
   resources :words
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
